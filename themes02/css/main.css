@@ -1,0 +1,941 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+   @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=vietnamese');
+
+   html, body {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    
+    font-family: 'Roboto', sans-serif;
+  }
+  body{
+    overflow-x: hidden;
+  }
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+ ::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+ hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+ audio,
+ canvas,
+ iframe,
+ img,
+ svg,
+ video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+ fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+ textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+   .browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+  }
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+ .hidden {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+ .visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+ .visuallyhidden.focusable:active,
+ .visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+ .invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+ .clearfix:before,
+ .clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+ul {
+  list-style: none;
+}
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+   @media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+  }
+
+  @media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+  }
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+   @media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+      background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+        http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+      }
+
+      a,
+      a:visited {
+        text-decoration: underline;
+      }
+
+      a[href]:after {
+        content: " (" attr(href) ")";
+      }
+
+      abbr[title]:after {
+        content: " (" attr(title) ")";
+      }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+     a[href^="#"]:after,
+     a[href^="javascript:"]:after {
+      content: "";
+    }
+
+    pre,
+    blockquote {
+      border: 1px solid #999;
+      page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+     thead {
+      display: table-header-group;
+    }
+
+    tr,
+    img {
+      page-break-inside: avoid;
+    }
+
+    img {
+      max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+      orphans: 3;
+      widows: 3;
+    }
+
+    h2,
+    h3 {
+      page-break-after: avoid;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.8em;
+    color: #60646d;
+  }
+
+/* ==========================================================================
+  header-area
+  ========================================================================== */
+ /*  .header-area{
+   background-color: #fff;
+   } */
+
+   .navbar-default {
+    background-color: #fff;
+    border: none;
+  }
+  .navbar-nav {
+    float: right;
+  }
+  .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #fff;
+    background-color: #F31D2F;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .navbar-default .navbar-nav>li>a {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .navbar-default .navbar-toggle {
+    border-radius: 0;
+    border: none;
+    background: transparent;
+    transition: all .5s ease-out;
+  }
+
+  .navbar-default .navbar-toggle:hover{
+    background-color: #F31D2F;
+  }
+
+  .navbar-default .navbar-toggle i {
+    color: #000;
+    padding: 0;
+    font-size: 30px;
+    transition: all .5s ease-out;
+  }
+  .navbar-default .navbar-toggle i:hover {
+    color: #fff;
+  }
+  /* .logo{
+    line-height: 65px;
+  }
+  */
+  .banner-slider {
+    background: url('../images/bg-slider.png') no-repeat center center fixed;
+    height: 450px;
+    position: relative;
+    top: 60px;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .card-box {
+    min-height: 300px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -40px;
+  }
+
+  ul.footer-card {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    background-color: #F31D2F;
+    width: 100%;
+    height: 40px;
+  }
+
+  ul.footer-card li {
+    text-align: center;
+  }
+  ul.footer-card li a {
+   margin-left: 15px;
+   padding-left: 15px;
+   line-height: 40px;
+ }
+ ul.footer-card li a:first-child {
+   margin-left: 0;
+   padding-left: 0;
+ }
+
+ ul.footer-card li a i {
+  font-size: 21px;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+
+}
+ul.footer-card li a i:hover {
+  width: 30px;
+  height: 30px;
+  background-color: #68e0b4;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  transition: all .2s ease-out;
+}
+.body-card {
+  position: absolute;
+  left: 0;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.avatar-img img {
+  margin-right: 10px;
+  border: 3px solid #e2e2e2;
+}
+
+.info-name h1 {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+.info-name h1 span {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+}
+.info-name h3 {
+  font-size: 21px;
+  margin: 0 0 10px 0;
+  padding: 0 0 5px 0;
+  color: #a2a2a2;
+  font-weight: 300;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+ul.list-contact {
+ margin: 0;
+ padding: 0;
+}
+ul.list-contact li {
+  line-height: 1.6em;
+}
+
+ul.list-contact li a {
+  color: #344146;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+ul.list-contact li a span {
+  text-transform: uppercase;
+  width: 100px;
+  float: left;
+}
+
+
+
+/* personal-profile */
+
+
+.personal-profile {
+  background-color: #efefef;
+  padding: 160px 0 60px 0;
+}
+
+h1.title-name {
+ font-size: 30px;
+ margin: 0 0 30px 0;
+ padding: 0 0 10px 0;
+ color: #344146;
+ text-transform: capitalize;
+ position: relative;
+ display: inline-block;
+}
+h1.title-name span {
+  color: #F31D2F;
+}
+/* h1.title-name:after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  border: 2px solid #53DF83;
+  bottom: 0;
+  left: 55px; 
+  } */
+
+  /* ------------------- Carousel Styling ------------------- */
+
+  .carousel-caption {
+    background-color: rgba(0,0,0,.5);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    padding: 0 0 10px 25px;
+    color: #fff;
+    text-align: left;
+  }
+
+  .carousel-indicators {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 15;
+    margin: 0;
+    padding: 0 25px 25px 0;
+    text-align: right;
+  }
+
+  .carousel-control.left,
+  .carousel-control.right {
+    background-image: none;
+  }
+  .carousel-indicators {
+    padding: 0 0 10px 25px ;
+    text-align: left;
+  }
+  .carousel-indicators li {
+    border-radius: 0;
+    width: 35px;
+    height: 8px;
+    margin: 0;
+
+  }
+
+  .carousel-indicators .active {
+    width: 35px;
+    height: 8px;
+    background-color: #F31D2F;
+  }
+
+  /* ------------------- Section Styling - Not needed for carousel styling ------------------- */
+
+  .personal-profile p {
+    font-size: 14px;
+    line-height: 1.8em;
+    color: #60646d;
+  }
+
+  a.btn-more {
+    border-radius: 0;
+    background-color: #fff;
+    color: #60646d;
+    border: 1px solid #F31D2F;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: all 0.5s ease-in-out
+  }
+  a.btn-more:hover {
+    background-color: #F31D2F;
+    color: #fff;
+    border: 1px solid #F31D2F;
+  }
+
+
+  .skills-gr {
+    padding: 60px 0px;
+  }
+  .gr-sk-bx {
+    text-align: center;
+  }
+
+
+/* ==============progress-bar
+===================================*/
+.progress {
+  position: relative;
+  height: 20px;
+}
+.progress > .progress-type {
+  position: absolute;
+  left: 0px;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 0px 29px 0px 10px;
+  color: rgb(255, 255, 255);
+  background-color: rgba(25, 25, 25, 0.2);
+
+
+}
+.progress > .progress-completed {
+  position: absolute;
+  right: 0px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0px 10px 2px;
+}
+
+#bar-1 {
+  animation: progressBar 2s ease-in-out;
+  animation-fill-mode:both; 
+}
+#bar-2 {
+  animation: progressBar2 2s ease-in-out;
+  animation-fill-mode:both; 
+}
+#bar-3 {
+  animation: progressBar3 2s ease-in-out;
+  animation-fill-mode:both; 
+}
+#bar-4 {
+  animation: progressBar4 2s ease-in-out;
+  animation-fill-mode:both; 
+}
+#bar-5 {
+  animation: progressBar5 2s ease-in-out;
+  animation-fill-mode:both; 
+}
+@keyframes progressBar {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+@keyframes progressBar2 {
+  0% { width: 0; }
+  100% { width: 40%; }
+}
+@keyframes progressBar3 {
+  0% { width: 0; }
+  100% { width: 80%; }
+}
+@keyframes progressBar4 {
+  0% { width: 0; }
+  100% { width: 65%; }
+}
+@keyframes progressBar5 {
+  0% { width: 0; }
+  100% { width: 90%; }
+}
+
+.progress-bar-dangerCstom {
+  background-color: #F31D2F;
+}
+
+
+
+
+
+
+
+.parallax-area {
+  background: url('../images/contents/parallax-bg.png')  no-repeat  center center fixed;
+  margin: 0;
+  height: 280px;
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 111;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.parallax-area h1 {
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 300;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 5px;
+  margin-top:130px;
+}
+
+
+
+
+
+
+
+
+.gr-wrokExper-bx {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0px 0 0;
+  position: relative;
+}
+.timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 3px;
+  background-color: #F31D2F;
+  left: 50%;
+  margin-left: -1.5px;
+}
+
+.timeline > li {
+  margin-bottom: 20px;
+  position: relative;
+}
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+.timeline > li:after {
+  clear: both;
+}
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+.timeline > li:after {
+  clear: both;
+}
+.timeline > li > .timeline-panel {
+  width: 46%;
+  float: left;
+  border: 1px solid #F31D2F;
+  padding: 20px;
+  position: relative;
+}
+.timeline > li > .timeline-panel:before {
+  position: absolute;
+  top: 26px;
+  right: -15px;
+  display: inline-block;
+  border-top: 15px solid transparent;
+  border-left: 15px solid #F31D2F;
+  border-right: 0 solid #F31D2F;
+  border-bottom: 15px solid transparent;
+  content: " ";
+}
+.timeline > li > .timeline-panel:after {
+  position: absolute;
+  top: 27px;
+  right: -14px;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid #fff;
+  border-right: 0 solid #fff;
+  border-bottom: 14px solid transparent;
+  content: " ";
+}
+.timeline > li > .timeline-badge {
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.4em;
+  text-align: center;
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  margin-left: -25px;
+  background-color: #999999;
+  z-index: 100;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: right;
+}
+.timeline > li.timeline-inverted > .timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+.timeline > li.timeline-inverted > .timeline-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+}
+.timeline-badge.primary {
+  background-color: #2e6da4 !important;
+}
+.timeline-badge.success {
+  background-color: #3f903f !important;
+}
+.timeline-badge.warning {
+  background-color: #f0ad4e !important;
+}
+.timeline-badge.danger {
+  background-color: #d9534f !important;
+}
+.timeline-badge.info {
+  background-color: #5bc0de !important;
+}
+.timeline-title {
+  margin-top: 0;
+  color: inherit;
+  font-size: 21px;
+  font-weight: 400;
+}
+.text-year {
+  font-size: 16px;
+  color: #F31D2F;
+}
+.timeline-body > p,
+.timeline-body > ul {
+  margin-bottom: 0;
+}
+.timeline-body > p + p {
+  margin-top: 5px;
+}
+
+
+
+
+
+
+.portfolio-gallery-filter { 
+  position: relative; 
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;  
+}
+
+#filters {
+  list-style:none;
+  display: inline-block;
+  position:relative;
+  left:28%;
+
+}
+
+#filters li {
+  float:left;
+}
+
+#filters li span {
+  display: block;
+  padding:10px 20px;   
+  text-decoration:none;
+  color:#666;
+  cursor: pointer;
+}
+
+#filters li span.active {
+ background: #F31D2F;;
+ color:#fff;
+ transition: all .5s ease-out;
+}
+
+
+
+#portfoliolist .portfolio {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  width:23%;
+  margin:1%;
+  display:none;
+  float:left;
+  overflow:hidden;
+}
+
+.portfolio-wrapper {
+  overflow:hidden;
+  position: relative !important;
+  background: #666;
+  cursor:pointer;
+}
+.portfolio-wrapper a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 300;
+}
+
+.portfolio img {
+  max-width:100%;
+  position: relative;
+  top:0;
+  -webkit-transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:         all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);   
+}
+
+.portfolio .label {
+  position: absolute;
+  width: 100%;
+  height:40px;
+  bottom:-40px;
+  display: block;
+  -webkit-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:         all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.portfolio .label-bg {
+  background: #F31D2F;
+  width: 100%;
+  height:100%;
+  position: absolute;
+  top:0;
+  left:0;
+}
+
+
+.portfolio .label-text {
+  color:#fff;
+  position: relative;
+  z-index:500;
+  padding:5px 8px;
+}
+
+.portfolio .text-category {
+  display:block;
+  font-size:9px;
+}
+
+.portfolio:hover .label {
+  bottom:0;
+}
+.portfolio:hover img {
+  top:-30px;
+}  
+
+
+/* Self Clearing Goodness */
+.portfolio-gallery-filter:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+.clearfix:before,
+.clearfix:after,
+.row:before,
+.row:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+  .row:after,
+  .clearfix:after {
+    clear: both; }
+    .row,
+    .clearfix {
+      zoom: 1; }
+
+      .clear {
+        clear: both;
+        display: block;
+        overflow: hidden;
+        visibility: hidden;
+        width: 0;
+        height: 0;
+      }
+

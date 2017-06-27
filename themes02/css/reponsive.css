@@ -1,0 +1,109 @@
+
+
+@media (max-width: 568px){
+    ul.timeline:before {
+        display:none;
+    }
+
+    ul.timeline>li>.timeline-panel, ul.timeline>li>.timeline-panel.timeline-inverted {
+        width: 100%;
+        border:none !important;
+    }
+
+    ul.timeline>li>.timeline-badge {
+        display:none;
+    }
+
+    ul.timeline>li>.timeline-panel {
+        float: right;
+    }
+
+    ul.timeline>li>.timeline-panel:before {
+        display:none;
+    }
+
+    ul.timeline>li>.timeline-panel:after {
+        display:none;
+    }
+}
+
+
+/* #Tablet (Portrait) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .portfolio-gallery-filter {
+    width: 100%; 
+}
+}
+
+
+/*  #Mobile (Portrait) - Note: Design for a width of 320px */
+@media only screen and (max-width: 767px) {
+
+    ul.timeline:before {
+        left: 40px;
+    }
+
+    ul.timeline > li > .timeline-panel {
+        width: calc(100% - 90px);
+        width: -moz-calc(100% - 90px);
+        width: -webkit-calc(100% - 90px);
+        border: 1px solid #F31D2F;
+        -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+    }
+
+
+
+    ul.timeline > li > .timeline-badge {
+        left: 15px;
+        margin-left: 0;
+        top: 16px;
+    }
+
+    ul.timeline > li > .timeline-panel {
+        float: right;
+    }
+
+    ul.timeline > li > .timeline-panel:before {
+        border-left-width: 0;
+        border-right-width: 15px;
+        left: -15px;
+        right: auto;
+    }
+
+    ul.timeline > li > .timeline-panel:after {
+        border-left-width: 0;
+        border-right-width: 14px;
+        left: -14px;
+        right: auto;
+    }
+
+
+
+    .portfolio-gallery-filter { 
+        width: 100%; 
+    }
+
+    #portfoliolist .portfolio {
+        width:48%;
+        margin:1%;
+    }   
+
+    #ads {
+        display:none;
+    }
+
+}
+
+
+/* #Mobile (Landscape) - Note: Design for a width of 480px */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .portfolio-gallery-filter {
+    width: 100%;
+}
+
+#ads {
+    display:none;
+}
+
+}
